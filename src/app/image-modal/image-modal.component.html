@@ -1,0 +1,16 @@
+<div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center z-50">
+  <!-- Modal Overlay -->
+  <div class="fixed inset-0 bg-black opacity-50"></div>
+
+  <!-- Modal Container -->
+  <div style="width: 740px;" class="bg-white rounded-lg shadow-lg p-6  w-full z-10">
+    <!-- Modal Content -->
+    <div>
+      <img [src]="imageUrl" alt="Full screen image" style="width: 690px;" />
+    </div>
+
+    <!-- Close Button -->
+    <button class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800" (click)="close()">
+      <svg style="color: white;" class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path fill-rule="evenodd"
+          d="M9.293 10L3.146 3.854a1 1 0 0 1 0-1.415L4.56.292a1 1 0 0 1 1.415 0L10 6.708l4.029-4.029a1 1 0 0 1 1.415 0l1.415 1.415a1 1 0 0 1 0 1.415L10.707 10l5.146 5.146a1 1 0 0 1 0 1.415l-1.415 1.415a1 1 0 0 1-1.415 0L10 13.292l-4.029 4.029a1 1 0 0 1-1.415 0l-1.415-1.415a1 1 0 0 1 0-1.415L9.293 10z" />

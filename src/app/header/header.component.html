@@ -1,0 +1,18 @@
+<nav class="bg-blue-800 shadow-lg">
+
+  <div class="container mx-auto">
+
+    <div class="sm:flex justify-around">
+      <!-- site-title -->
+      <p class="text-white text-3xl font-bold p-3">Senior Frontend Assignment</p>
+
+      <ul class="text-gray-400 sm:self-center text-x1 border-t sm:border-none">
+
+        <li class="sm:inline-block">
+          <a [routerLink]="['/images']" routerLinkActive="active" class=" p-3 hover:text-white">Images</a>
+          <a [routerLink]="['/tasks']" routerLinkActive="active" class=" p-3 hover:text-white">Tasks</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
