@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject, of } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { ImageService } from '../services/image.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-image-grid',

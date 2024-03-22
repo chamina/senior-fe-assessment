@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +16,16 @@ export class ImageService {
   constructor(private http: HttpClient) {}
 
   getImagesUrl(): Observable<string> {
-    return this.http.get<string>('assets/image_paths.txt', {
-      responseType: 'text' as 'json',
-    });
+    return this.http
+      .get<string>('assets/image_paths.txt', {
+        responseType: 'text' as 'json',
+      })
+      .pipe(
+        catchError((error) => {
+          console.error('Error fetching image URLs:', error);
+          return throwError(error);
+        })
+      );
   }
 
   getImages(): string[] {
