@@ -8,6 +8,7 @@ import { ImageGridComponent } from './image-grid/image-grid.component';
 import { HeaderComponent } from './header/header.component';
 import { TaskpageComponent } from './taskpage/taskpage.component';
 import { ImageModalComponent } from './image-modal/image-modal.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,12 @@ import { ImageModalComponent } from './image-modal/image-modal.component';
     TaskpageComponent,
     ImageModalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgOptimizedImage,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
